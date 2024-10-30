@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FI</title>
+    <link rel="icon" href="logo.jfif">
+    <style>
+        body {
+            font-family: Georgia, serif;
+            color: #333;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+        }
+        header {
+            background-color: white;
+            color: black;
+            width: 100%;
+            padding: 1em 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+        }
+        nav {
+            width: 90%;
+            max-width: 1000px;
+            display: flex;
+            justify-content: space-around;
+            padding: 0.5em 0;
+            background-color: #eee;
+            border-bottom: 2px solid #000;   
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            image-rendering: auto;
+        }
+
+        ul {
+            width: 90%;
+            max-width: 1000px;
+            display: flex;
+            justify-content: space-around;
+            padding: 0.5em 0;
+            background-color: #eee;
+            border-bottom: 2px solid #000;
+        }
+
+        ol {
+            width: 90%;
+            max-width: 1000px;
+            display: flex;
+            justify-content: space-around;
+            padding: 0.5em 0;
+            background-color: white;
+            border-bottom: 2px solid #000;
+        }
+
+        p{
+            width: 90%;
+            max-width: 1000px;
+            display: flex;
+            justify-content: space-around;
+            padding: 0.5em 0;
+            background-color: white;
+            border-bottom: 2px solid #000; 
+        }
+
+        p font{
+            font-family: "Aptos Black";
+        }
+
+        .contenedor {
+            display: flex;
+            flex-direction: row;
+            max-width: 1000px;
+            width: 100%;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .column {
+            width: 50%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Estilo para el texto */
+        .paragraph {
+            text-align: justify;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 1.5em;
+        }
+
+        .contenido {
+            width: 90%;
+            max-width: 1000px;
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            margin-top: 1em;
+        }
+        .section {
+            background-color: white;
+            padding: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .section h2 {
+            color: #444;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 0.5em;
+        }
+        footer {
+            width: 50%;
+            padding: 1em 0;
+            background-color: #10d4ea;
+            color: black;
+            text-align: center;
+            margin-top: 2;
+        }
+        footer p{
+            color: black;
+        }
+        #visitas {
+            font-weight: bold;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <footer>
+        <p>Número de visitas: <span id="visitas"></span></p>
+    </footer>
+    
+    <script>
+        // Obtener el contador de visitas almacenado o iniciarlo en 0 si no existe
+        let visitas = localStorage.getItem('visitas') ? parseInt(localStorage.getItem('visitas')) : 0;
+        visitas += 1;  // Incrementar contador
+        localStorage.setItem('visitas', visitas);  // Guardar nuevo valor
+        document.getElementById('visitas').innerText = visitas;  // Mostrar contador
+    </script>
+    <br><br>
+
+<nav>
+    <a href="#politica">Política <br><img src="img3.jfif" alt="left" width="70px" height="70px"></a>
+    <a href="#social">Social <br><img src="img1.jpg" alt="left" width="70px" height="70px"></a>
+    <a href="#tecnologia">Tecnología <br><img src="img2.jpg" alt="left" width="70px" height="70px"></a>
+    <a href="#universitario">Universitario <br><img src="img4.jfif" alt="left" width="70px" height="70px"></a>
+</nav>
+
+<ul>
+    31 de Octubre de <br>2024<hr>
+    NEWS ITESA<hr>
+    Reporte  <br>Mensual<hr>
+</ul>
+
+<ol>
+    <font color="black"> <b><i>EXCLUSIVA </i></b></font><br>
+    Sheinbaum Anuncia Iniciativa contra Reelección y Nepotismo en Cargos de Elección Popular
+La presidenta de México explica que luego de una reforma que se realizó durante el sexenio de Felipe Calderón, en la actualidad pueden reelegirse los presidentes municipales y legisladores
+<br>
+</ol>
+
+<p>
+    <center><font> <b><i>PERFILA INE DISTRIBUIR MÁS DE 7 MIL MDP A 6 PARTIDOS POLÍTICOS EN 2025</i></b></font><br><br></center>
+    <div class="contenedor">
+        <!-- Columna izquierda -->
+    <div class="column">
+        <div class="paragraph">
+
+    Ciudad de México. La Comisión de 
+    Prerrogativas y Partidos Políticos del Instituto
+    Nacional Electoral (INE) aprobó un
+    anteproyecto de acuerdo del Consejo General
+    (CG) por el que se distribuye entre los seis 
+    partidos nacionales el  del ejercicio 2025, que 
+    asciende a 7 mil 354 millones 266 mil 504 pesos.financiamiento público 
+Según el documento, que todavía tiene que ser 
+discutido por el CG, Morena recibirá el mayor
+nivel de recursos: 2 mil 
+584 millones 356 mil 877 pesos; seguido del PAN: mil 294 millones 
+93 mil 318; el PRI: 985 millones 302 mil 647; y 
+Movimiento Ciudadano: 972 millones 417 mil 
+271.
+En tanto, para el Partido Verde Ecologista de 
+México: 838 millones 97 mil 566 pesos y para 
+el Partido del Trabajo (PT) 679 millones 998 mil 
+825 pesos.
+
+El total de financiamiento público para el 
+ejercicio 2025, que abarca recursos para las 
+actividades ordinarias permanentes, específicas,
+así como la prerrogativa postal y telegráfica, ya
+había sido aprobado por el CG <br><br>
+<img src="img5.jpeg" alt="" height="200" width="300">
+</div>
+</div>
+
+<!-- Columna derecha -->
+<div class="column">
+<div class="class paragraph">
+en agosto pasado, pero estaba pendiente su 
+distribución entre los partidos luego de que el 
+PRD perdió su registro al no haber obtenido 
+por lo menos el tres por ciento de la votación 
+válida emitida en la elección federal 
+celebrada el 2 de junio pasado. 
+
+Así, por unanimidad, la comisión que preside 
+Dania Ravel acordó que el recurso para el 
+sostenimiento de las actividades ordinarias 
+permanentes y para actividades específicas, 
+que equivale a 7 mil 213 millones 504 mil 956 
+pesos, “el 30 por ciento se reparta de forma 
+igualitaria y el 70 por ciento restante de 
+acuerdo con el porcentaje de votos
+obtenidos en la elección de diputaciones 
+federales”. 
+
+En la sesión extraordinaria, igualmente se 
+aprobó un anteproyecto de acuerdo por el 
+que se actualizan los lineamientos para la 
+verificación del número mínimo de personas 
+afiliadas a las organizaciones de la ciudadanía 
+interesadas en constituirse como partido 
+político local a partir del año 2025. 
+</div>
+</div>
+</div>
+<br><br><br><br>
+</p>
+<div class="contenido">
+    <section id="politica" class="section">
+        <h2>POLITÍCA</h2>
+        <center><p><b><i>La presidenta Claudia Sheinbaum ha confirmado la detención del presunto asesino material del sacerdote Marcelo Pérez</i></b></p></center>
+        <div class="contenedor">
+        <div class="column">
+        <div class="paragraph">
+            La presidenta de México, Claudia Sheinbaum, ha confirmado este miércoles la detención del presunto autor 
+            material del homicidio del sacerdote Marcelo Pérez San Cristóbal de las Casas, Chiapas. La información 
+            habia sido adelantada la tarde de este martes por la Fiscalía del estado de Chiapas  "Hubo una detención del presunto autor 
+            material del homicidio del padre Marcelo. Lo hizo la Fiscalía de Chiapas. La idea era que la FGR atrajera el caso, entonces le 
+            pedimos a un representante que entre en contacto para que no se vaya a romper la investigación y se coadyuden", dijo la mandataria
+            en su conferencia matutina.
+        </div>
+        </div>
+
+        <!-- Columna derecha -->
+     <div class="column">
+        <div class="class paragraph">
+            También se refirió a la reforma judicial. La presidenta mencionó que recibio la notificación de la jueza Nancy Juárez 
+            para eliminar la reforma  judicial del Diario Oficial de la  Federación a través de un código QR, pero fue eliminado.
+            "Que Harvard nos diga qué opina que el QR no abrió", senteció. "No tiene fundamento jurídico", ha sostenido varias veces.
+            El enfrentamiento es ya el más intenso que ah sostenido el oficialismo con la judicatura en el corto tiempo que lleva 
+            el Gobierno de Sheinbaum. <br>
+            <img src="img6.jpeg" alt="" height="200" width="300">
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="social" class="section">
+        <h2>Social</h2>
+        <center><b><i><p>Gran Premio de México: Checo Pérez en la clasificación en F1</p></i></b></center>
+        <div class="contenedor">
+            <div class="column">
+            <div class="paragraph">
+                La ciudad de México vive la emoción de la Fórmula 1 con la llegada del Gran Premio, donde 
+                el tapatío Sergio Checo Pérez buscara subir nuevamente al podio con la escudería Red Bull. <br>
+                <img src="img7.jpeg" alt="" height="200" width="300">
+        </div>
+        </div>
+
+        <!-- Columna derecha -->
+        <div class="column">
+        <div class="class paragraph">
+            En el primer día de actividades se celebraron las practicas 1 y 2 del evento, donde Checo Pérez 
+            no tuo su mejor actuación, pues culminó en el noveno sitio tras registrar un cronometro de 1: 18.392,
+            quedándose a 693 milésimas de Carlos Sainz. <br>
+            Durante las primeras vueltas, Checo reportó por radio que le pedal de su freno se sentía un poco duro, 
+            mientras que Max Verstappen escucho "un ruido extraño", por lo que los ojos también estarán puestos sobre
+            la escudería Red Bull, debido a los problemas que pudieran presentar sus monoplazas.
+        </div>
+        </div>
+        </div>
+
+    </section>
+
+    <section id="tecnologia" class="section">
+        <h2>Tecnología</h2>
+        <center><b><i><p>EL MUNDO DE LA TECNOLOGÍA</p></i></b></center><br>
+        En 2024, el mundo de la tecnología sigue evolucionando a un ritmo sin precedentes, 
+        revolucionando las industrias y transformando nuestra forma de trabajar. Con el aumento 
+        del uso de las tecnologías disponibles y el desarrollo de otras nuevas, el próximo año 
+        promete cambiar las reglas del juego y presentarnos muchas innovaciones de vanguardia. 
+        En este post, exploraremos 5 tendencias tecnológicas que destacarán durante este año, 
+        impulsándonos hacia un futuro impulsado por la creatividad y las nuevas estrategias de transformación digital.
+
+        <div class="contenedor">
+            <div class="column">
+            <div class="paragraph">
+                <b>LA IA, EL CENTRO DE ATENCIÓN</b>
+                El uso de la inteligencia artificial (IA) está presente en muchos aspectos de nuestra 
+                vida empresarial y personal. Se trata de un fenómeno nuevo, y a veces aterrador. 
+                Las preocupaciones más comunes van desde el temor a que la IA provoque una pérdida 
+                generalizada de puestos de trabajo hasta visiones apocalípticas de robots que se apoderan 
+                del mundo. Una cosa ha quedado clara: la IA no sustituye a un ser humano que conozca la 
+                misión y los valores de marca de la empresa. No comprueba cosas como el lenguaje inapropiado 
+                o las instrucciones incorrectas. <br>
+                <img src="img11.jfif" alt="" height="200" width="300">
+        </div>
+        </div>
+
+        <!-- Columna derecha -->
+        <div class="column">
+            <div class="class paragraph">
+                A medida que la IA sigue evolucionando, se ha convertido tanto en una bendición como en
+                 una amenaza para la ciberseguridad. Cuando se utilizan para la ciberdelincuencia, estos 
+                 avances tecnológicos pueden permitir ataques más sofisticados y de mayor alcance, como 
+                 correos electrónicos de phishing muy convincentes, falsificaciones de audio y vídeo y 
+                 otras operaciones de pirateo. Ya están disponibles en Internet herramientas de IA de 
+                 código abierto que facilitan este tipo de infracciones. Incluso los ciberdelincuentes 
+                 inexpertos tendrán el poder de escenificar ataques totalmente automatizados y basados en 
+                 la IA, y los hackers experimentados dispondrán de herramientas para crear problemas a gran escala muy fácilmente. <br>
+                 <img src="img12.jfif" alt="" height="200" width="300">
+            </div>
+            </div>
+            </div>
+    </section>
+
+    <section id="universitario" class="section">
+        <h2>Universidad</h2>
+        <p><b><i>Tip's para estudiantes </i></b></p>
+        <div class="contenedor">
+            <div class="column">
+            <div class="paragraph">
+                Sé proactivo/a en tu aprendizaje: <br>Participa activamente en tus clases, Colabora con tus 
+                compañeros en proyectos y desarrolla habilidades de trabajo en equipo. <br>
+                Desarrolla Habilidades de Estudio efectivas: <br> Toma apuntes durante las clases, haz resúmenes 
+                de lecturas y material de estudio, utiliza tarjetas de memoria para repasar conceptos clave.
+            </div>
+            </div>
+
+            <!-- Columna derecha -->
+        <div class="column">
+            <div class="class paragraph">
+                Construye relaciones significativas: <br><br> Cultiva relaciones genuinas y significativas 
+                con tus compañeros de clase, profesores y mentores. <br>
+                Mas, por pequeños que sean. <br><br>
+                <img src="img8.jfif" alt="" height="200" width="300">
+            </div>
+        </div>
+        </div>
+        <ol>
+            <font color="black"> <b><i>EXCLUSIVA </i></b></font><br>
+            TECNÓLOGO NACIONAL DE MÉXICO
+        <br>
+        </ol>
+
+        <p><b><i>LA META ES ALCANZAR 300,000 ESTUDIANTES</i></b></p>
+        <div class="contenedor">
+            <div class="column">
+            <div class="paragraph">
+                La presidenta de México, Claudia Sheinbaum Pardo, anunciará el programa de ampliación del sistema 
+                de universidades  públicas para alcanzar la meta de 300,000 estudiantes, el director general de tecnológico
+                nacional de México hizo el compromiso de que para finales del sexenio la matrícula del tecnológico 
+                contará con 85,000 lugares nuevos.
+            </div>
+            </div>
+
+            <!-- Columna derecha -->
+        <div class="column">
+            <div class="class paragraph">
+                <img src="img9.jfif" alt="" height="200" width="300">
+                </div>
+                </div>
+                </div>
+           
+                <p><b><i>ECOLOGÍA</i></b></p>
+                <div class="contenedor">
+                    <div class="column">
+                        <div class="class paragraph">
+                            <img src="img10.jfif" alt="" height="200" width="300">
+                            </div>
+                            </div>
+
+                    <!-- Columna derecha -->
+                    <div class="column">
+                    <div class="paragraph"> 
+                        Jóvenes ayudan a productores de miel para el Primer Concurso Nacional de Mieles de Apicultores
+                        y Apicultoras Con medalla de plata reconocen a equipo del municipio de Simón Bolívar, estudiantes 
+                        de la carrera de Ecología de la UJED apoyaron con orientación sobre propiedades y 
+                        características de la miel.
+                    </div>
+                    </div>  
+                    </div>     
+
+    </section>
+</div>
+
+<ol>
+    <center><font color="black"> <b><i>Los jovenes en riesgo de ser adultos</i></b></font><br></center>
+<br>
+</ol>
+
+<center><p>Conéctate con nuestra comunidad</p></center>
+                <div class="contenedor">
+                    <div class="column">
+                        <div class="class paragraph">
+                            *En 2021 fallecieron más de 1,5 millones de adolescentes y adultos jóvenes de entre 10 y 24 años, es decir, casi 4500 al día. <br>
+                            *De todos los grupos de edad, el que presenta menor riesgo de muerte es el de los adolescentes de entre 10 y 14 años.
+                            </div>
+                            </div>
+
+                    <!-- Columna derecha -->
+                    <div class="column">
+                    <div class="paragraph"> 
+                        *La mitad de los transtornos mentales en la edad adulta ya han empezado a las 14 años; no obstante, la mayoría de casos ni se detectan, ni se tratan.
+                    </div>
+                    </div>  
+                    </div> 
+
+    <ol>
+    <font color="black"> <b><i>EXCLUSIVA </i></b></font><br>
+        <b>Los adolescentes pueden enfrentar diversos problemas entre ellos.</b>
+    <br>
+    </ol>
+
+    <center><p><b>DEPARTAMENTO DE VENTAS ALCANZA UN NUEVO HITO</b></p></center>
+                <div class="contenedor">
+                    <div class="column">
+                        <div class="class paragraph">
+                            <b>SALUD MENTAL</b><br>
+                            La depresión, la ansiedad y los transtornos del comportamiento son algunas de las principales causas de enfermedad
+                            y discapacidad en los adolescentes. <br>
+                            <b>ADICCIONES</b> <br>
+                            El consumo de alcohol y drogas, así commo la adicción a las nuevas tecnologías y al juego son
+                            problemas que pueden afectar a los adolescentes.
+                            </div>
+                            </div>
+
+                    <!-- Columna derecha -->
+                    <div class="column">
+                    <div class="paragraph"> 
+                        <img src="img13.jfif" alt="" height="200" width="300">
+                    </div>
+                    </div>  
+                    </div> 
+
+                    <center><p><b>LOS ADOLESCENTES SON MÁS VULNERABLES A LA MUERTE </b></p></center>
+                    <div class="contenedor">
+                        <div class="column">
+                            <div class="class paragraph">
+                                <img src="img14.jfif" alt="" height="200" width="300">
+                                </div>
+                                </div>
+    
+                        <!-- Columna derecha -->
+                        <div class="column">
+                        <div class="paragraph"> 
+                            <b>Relaciones sexuales tempranas</b><br>
+                            Las relaciones sexuales tempranas pueden llevar a embarazos no deseados o a contraer enfermedades de 
+                            transmición sexual. <br>
+                            <b>Consumo de sustancias</b><br>
+                            El inicio temprano del consumo nocivo de sustancias psicoactivas se asocia a un mayor riesgo de caer en 
+                            dependencias y de sufrir otras problemas durante la edad adulta; este consumo es desproporcionalmente 
+                            elevado entre los jóvenes en comparación con las personas de edad avanzada.
+
+                        </div>
+                        </div>  
+                        </div>                   
+
+
+</body>
+</html>
